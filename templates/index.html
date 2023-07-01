@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Альбомы Hackd</title>
+</head>
+<body>
+<div class="con">
+    <h1>Поддержка</h1>
+    {% for album in albums %}
+         <div class="a">
+            <a href="{{ album['href'] }}">
+                <img src="{{ album['img'] }}" alt="{{ album['name'] }}" width="120">
+                <h2>{{ album['name'] }}</h2>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+</body>
+
+<style>
+    a {
+        text-decoration: none;
+        color: white;
+    }
+	body {
+		margin: 0;
+		background-color: black;
+		color: aliceblue;
+		font-family: sans-serif;
+		font-weight: 900;
+	}
+.a {
+	display: inline-block;
+	margin-top: 12px;
+	width: 200px;
+	text-align: center;
+}
+.a img {
+	border-radius: 99px;
+}
+.con {
+	width: 900px;
+	margin: auto;
+}
+</style>
+</html>
